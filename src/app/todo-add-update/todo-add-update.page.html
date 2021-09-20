@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [text]="getBackButtonText()" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label class="ion-text-wrap">
+      <h2>
+        <ion-input placeholder="Enter ToDo name..." [(ngModel)]="todo.name"></ion-input>
+      </h2>
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Status</ion-label>
+    <ion-select value="brown" okText="Accept" cancelText="Cancel" [(ngModel)]="todo.status">
+      <ion-select-option value="todo">ToDo</ion-select-option>
+      <ion-select-option value="done">Done</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-textarea rows="6" cols="20" placeholder="Enter more information here..." [(ngModel)]="todo.description"></ion-textarea>
+  </ion-item>
+
+  <ion-button expand="block" color="secondary" (click)="addUpdateToDo(EDIT_MODE)">{{ EDIT_MODE ? 'Update':'Add' }}</ion-button>
+
+</ion-content>

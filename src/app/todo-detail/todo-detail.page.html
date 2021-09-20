@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [text]="getBackButtonText()" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="todo">
+  <ion-item>
+    <ion-label class="ion-text-wrap">
+      <h2>
+        {{ todo.name }}
+        <span class="date">
+          <ion-note>{{ todo.date }}</ion-note>
+        </span>
+      </h2>
+      <h3>Status: <ion-note>{{ todo.status | titlecase }}</ion-note></h3>
+    </ion-label>
+  </ion-item>
+  
+  <div class="ion-padding">
+    <p>
+      {{ todo.description }}
+    </p>
+  </div>
+</ion-content>
