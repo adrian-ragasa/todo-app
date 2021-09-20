@@ -16,6 +16,6 @@ An alternative is to emulate the app on a device or upload it to the ionic cloud
 
 This project is using AppCenter as a mobile apk distributor.
 
-[Download the latest release here](https://install.appcenter.ms/users/eliu18/apps/todo/distribution_groups/todo)
+[Download the latest release here.](https://install.appcenter.ms/users/eliu18/apps/todo/distribution_groups/todo)
 
 
